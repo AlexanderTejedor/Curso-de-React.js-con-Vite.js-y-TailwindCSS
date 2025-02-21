@@ -1,9 +1,9 @@
 function SignIn() {
     return (
-        <div className="bg-amber-600">
+        <div className="bg-pink-600">
             Sign In
         </div>
         )
 }
 
-export default SignIn
+export { SignIn } 

@@ -1,9 +1,9 @@
 function MyOrders() {
     return (
-        <div className="bg-amber-600">
+        <div className="bg-yellow-600">
             My Orders
         </div>
         )
 }
 
-export default MyOrders
+export { MyOrders } 

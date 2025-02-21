@@ -1,9 +1,9 @@
-function myAccount() {
+function MyAccount() {
     return (
-        <div className="bg-amber-600">
+        <div className="bg-blue-600">
             My Account
         </div>
         )
 }
 
-export default myAccount
+export { MyAccount }

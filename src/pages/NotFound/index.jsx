@@ -1,9 +1,9 @@
 function NotFound() {
     return (
-        <div className="bg-amber-600">
+        <div className="bg-slate-600">
             Not Found
         </div>
         )
 }
 
-export default NotFound
+export { NotFound }
