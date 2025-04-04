@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, useEffect } from 'react'
 import PropTypes from "prop-types"
 
 const ShoppingCartContext = createContext()
@@ -26,6 +26,19 @@ export const ShoppingCartProvider = ({children}) => {
     // Shopping Cart - Order
     const [order, setOrder] = useState([]);
 
+    // Get products
+    const [items, setItems] = useState(null);
+
+    // Get products by title
+    const [searcByTitle, setSearcByTitle] = useState(null);
+
+    useEffect(() => {
+        fetch('https://api.escuelajs.co/api/v1/products')
+            .then(response => response.json())
+            .then(data => setItems(data))
+    }, [])
+    
+
     ShoppingCartProvider.propTypes = {
             children: PropTypes.node.isRequired,
         }
@@ -44,7 +57,11 @@ export const ShoppingCartProvider = ({children}) => {
             openCheckoutSideMenu,
             closeCheckoutSideMenu,
             order,
-            setOrder
+            setOrder,
+            items,
+            setItems,
+            searcByTitle,
+            setSearcByTitle
         }}>
             {children}
         </ShoppingCartContext.Provider>
