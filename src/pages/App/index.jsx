@@ -13,6 +13,11 @@ import './App.css'
 const AppRoutes = () => {
   let routes = useRoutes([
     { path: '/', /* default route for the app*/ element: <Home /> /* component to render when the path is matched */},
+    { path: '/clothes', element: <Home />},
+    { path: '/electronics', element: <Home />},
+    { path: '/fornitures', element: <Home />},
+    { path: '/toys', element: <Home />},
+    { path: '/others', element: <Home />},
     { path: 'my-account', element: <MyAccount /> },
     { path: 'my-order', element: <MyOrder /> },
     { path: 'my-orders', element: <MyOrders /> },
