@@ -26,7 +26,7 @@ const Navbar = () => {
                 <li><NavLink to='/sign-in' className={({ isActive }) => isActive ? activeStyle : undefined}>Sign In</NavLink></li>
                 <li className='flex items-center'>
                     <ShoppingBagIcon className="size-6 text-black"/>
-                    <div>{context.count}</div>
+                    <div>{context.cartProducts.length}</div>
                 </li>
             </ul>
         </nav>
